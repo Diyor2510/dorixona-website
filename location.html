@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1">
+        <title>Dorixona</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="location.css">
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFJzjw2kxMHly0aT_bkBHEDygJHOWTLU0&callback=initMap"
+        async
+        defer
+      ></script>
+    </head>
+    <body>
+        <header class="header">
+            <a href="#" class="logo">
+                <img src="images/Farmacia2.svg">
+            </a>
+            <!-- navbar menu-->
+            <nav class="headbar">
+                <a href="Home.html" target="">Bosh sahifa</a>
+                <a href="Login.html">Kirish</a>
+                <a href="Doctors.html">Doktorlar</a>
+                <a href="med.html">Dorilar</a>
+                <a href="call.html">Xizmat ko'rsatish</a>
+                <a href="location.html">Bog'lanish</a>
+            </nav>
+            <div class="menubtn">
+                <button>Yordam</button>
+            </div>
+           
+        
+            
+        </header>
+
+        <div class="tana">
+            <div class="uchrasm1"></div>
+            <div class="loc" id="map"></div>
+            <div class="uchrasm"></div>
+            <div class="uchrasm2">
+               
+            </div>
+        </div>
+        
+        <script>
+            // Xarita yuklash funksiyasi
+            function initMap() {
+              const location = { lat: 39.603579, lng: 67.094430 }; // Toshkent koordinatalari
+              const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 12,
+                center: location,
+              });
+              new google.maps.Marker({
+                position: location,
+                map: map,
+              });
+            }
+          </script>
+    </body>
+</html>
